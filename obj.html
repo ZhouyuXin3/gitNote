@@ -36,10 +36,28 @@
       passengers: 2,
       convertible: false,
       mileage: 88000,
+      start: false,
       drive: function() {
-        alert("Zoom zoom!");
+        if (this.started){
+          alert("Zoom zoom!");
+        } else {
+          alert("请先启动车辆");
+        }
+      },
+
+      start: function() {
+        this.started = true;
+      },
+      stop: function() {
+        this.started = false;
       }
     }
+      
+      fiat.start();
+      fiat.drive();
+      fiat.stop();
+
+      
 
     function isNewCar(car){
       if ( car.year >= 2017 && car.mileage<= 10000){
