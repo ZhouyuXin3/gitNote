@@ -7,16 +7,26 @@
   <title>Document</title>
   <script>
     function init(){
-      var obj = document.getElementById("title");
+      var h1obj = document.getElementById("title");
+      var picobj = document.getElementById("pic");
+      h1obj.innerHTML = "GOODBYE WORLD!!";
+      h1obj.setAttribute("class","tit");
+      picobj.setAttribute("src","2.jpg");
+      picobj.getAttribute("alt");
+      //document.getElementById()
   
-      alert(obj.innerHTML);
-      obj.innerHTML = "GOODBYE WORLD!";
+      //alert(obj.innerHTML);
+      //obj.innerHTML = "GOODBYE WORLD!";
     }
+
+    
   
-    window.onload = init;
+    window.onload = init;//实际上是个“回调函数”，要求在页面全部加载完成后，再
   </script>
 </head>
 <body>
   <h1 id ="title">hello world!</h1>
+  <img id="pic" src="1.jpg" alt="复联3">
+  
 </body>
 </html>
